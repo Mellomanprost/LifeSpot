@@ -101,7 +101,7 @@ input {
         border: 2px solid dimgrey;
     }
 
-.slider {
+/*.slider {
     position: relative;
 }
 
@@ -118,4 +118,88 @@ input {
 .thirdImg {
     position: absolute;
     left: 50%;
+}
+*/
+
+img {
+    width: 100%;
+}
+
+/* General styles */
+.slider {
+    position: relative;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.slider-element {
+    width: 100%;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    display: block;
+    outline: 2px solid white;
+    box-shadow: 0 0 3px 3px gray;
+}
+
+/* Navigation item styles */
+div.slider-arrow-left,
+div.slider-arrow-right {
+    width: 22px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.6;
+    z-index: 4;
+}
+
+div.slider-arrow-left {
+    left: 10px;
+    top: 40%;
+    display: block;
+    background: url("../../Static/IMG/arrow-left.png") no-repeat;
+}
+
+div.slider-arrow-right {
+    right: 10px;
+    top: 40%;
+    display: block;
+    background: url("../../Static/IMG/arrow-right.png") no-repeat;
+}
+
+div.slider-arrow-left:hover {
+    opacity: 1.0;
+}
+
+div.slider-arrow-right:hover {
+    opacity: 1.0;
+}
+
+div.slider-dots {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    text-align: center;
+}
+
+span.dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    background-color: #BBB;
+    border-radius: 5px;
+    cursor: pointer;
 }
