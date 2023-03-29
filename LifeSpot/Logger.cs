@@ -12,17 +12,17 @@ namespace LifeSpot
         public static void PrintMessage(Action logMode)
         {
             // Lambdas.Test();
-            
+
             Console.OutputEncoding = Encoding.Unicode;
             // Запускаем логирование
             Console.WriteLine("Логгер запущен");
-            
+
             // Вызываем делегат
             // "Под капотом" будет вызван метод, на который указывает делегат, что по сути очень 
             // похоже на то, как работает передача функций в качестве параметра в JS
             logMode.Invoke();
         }
-        
+
         // Вывод информационныз сообщений 
         public static void Info(string message)
         {
@@ -30,7 +30,7 @@ namespace LifeSpot
             Console.WriteLine(message);
             Console.ResetColor();
         }
-        
+
         // Вывод предупреждений 
         public static void Warning(string message)
         {
@@ -38,7 +38,7 @@ namespace LifeSpot
             Console.WriteLine(message);
             Console.ResetColor();
         }
-        
+
         // Вывод сообщений об ошибках
         public static void Error(string message)
         {

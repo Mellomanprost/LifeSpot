@@ -10,8 +10,8 @@ namespace LifeSpot
         public static void Main(string[] args)
         {
             // Выводим информационное сообщение 
-            PrintMessage( (() => Info("Запускаем приложение")) );
-            
+            PrintMessage((() => Info("Запускаем приложение")));
+
             CreateHostBuilder(args).Build().Run();
         }
 

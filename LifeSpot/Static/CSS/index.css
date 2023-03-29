@@ -174,11 +174,11 @@ div.slider-arrow-right {
 }
 
 .arrowTxt {
-    z-index: 3;
     position: absolute;
     top: -30%;
     left: 15%;
     text-align: center;
+    z-index: 3;
 }
 
 div.slider-arrow-left:hover {

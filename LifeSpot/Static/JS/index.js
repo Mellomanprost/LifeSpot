@@ -18,12 +18,12 @@
 function handleSession(logger, checker) {
 
     // Проверяем дату захода и проставляем, если новый визит
-    if(sessionStorage.getItem('startDate') == null) {
+    if (sessionStorage.getItem('startDate') == null) {
         sessionStorage.setItem('startDate', new Date().toLocaleString());
     }
 
     // Проверяем userAgent и проставляем, если новый визит
-    if(sessionStorage.getItem('userAgent') == null) {
+    if (sessionStorage.getItem('userAgent') == null) {
         sessionStorage.setItem('userAgent', window.navigator.userAgent);
     }
 
@@ -45,10 +45,10 @@ function handleSession(logger, checker) {
    */
     logger();
 
-//    // Сохраним время начала сессии
-//    session.startDate = new Date().toLocaleString();
-//    // Сохраним UserAgent
-//    session.userAgent = window.navigator.userAgent;
+    //    // Сохраним время начала сессии
+    //    session.startDate = new Date().toLocaleString();
+    //    // Сохраним UserAgent
+    //    session.userAgent = window.navigator.userAgent;
 }
 
 /*
@@ -57,13 +57,13 @@ function handleSession(logger, checker) {
 * */
 let checker = function (newVisit) {
     //session.age = prompt("Пожалуйста, введите ваш возраст?");
-    
+
     if (sessionStorage.getItem('userAge') >= 18) {
         if (newVisit) {
             alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + new Date().toLocaleString());
         }
     }
-    else{
+    else {
         alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
         window.location.href = "http://www.google.com"
     }
@@ -86,13 +86,13 @@ let logger = function () {
 * 
 * */
 
-function filterContent(){
+function filterContent() {
     let elements = document.getElementsByClassName('video-container');
 
-    for (let i = 0; i <= elements.length; i++ ){
+    for (let i = 0; i <= elements.length; i++) {
         let videoText = elements[i].getElementsByTagName('h3')[0].innerText;
 
-        if(!videoText.toLowerCase().includes(inputParseFunction().toLowerCase())){
+        if (!videoText.toLowerCase().includes(inputParseFunction().toLowerCase())) {
             elements[i].style.display = 'none';
         } else {
             elements[i].style.display = 'inline-block';
@@ -102,7 +102,7 @@ function filterContent(){
 
 /*
 * Всплывающее окно будет показано по таймауту
-* 
+*
 * */
 // setTimeout(() =>
 //     alert("Нравится LifeSpot? " + '\n' +  "Подпишитесь на наш Instagram @lifespot999!" ),

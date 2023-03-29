@@ -282,5 +282,3 @@ Slider.initialize = function (that) {
         }
     }
 };
-
-//new Slider();
