@@ -20,6 +20,8 @@ header, footer, body, .video-container {
     margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
+    position: relative;
+    top: 100px;
 }
 
 .review-text {
@@ -27,6 +29,8 @@ header, footer, body, .video-container {
     margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
+    position: absolute;
+    top: 350px;
 }
 
 
@@ -46,6 +50,7 @@ header {
     color: black;
     padding-left: 1%;
     padding-top: 1.2%;
+    position: relative;
 }
 /* Стиль хедера для главной страницы имеет приоритет, 
 так как используется селектор по идентификатору */
@@ -101,26 +106,6 @@ input {
         border: 2px solid dimgrey;
     }
 
-/*.slider {
-    position: relative;
-}
-
-.firstImg {
-    position: absolute;
-    top: 0;
-}
-
-.secondImg {
-    position: absolute;
-    bottom: 80%;
-}
-
-.thirdImg {
-    position: absolute;
-    left: 50%;
-}
-*/
-
 img {
     width: 100%;
 }
@@ -128,13 +113,28 @@ img {
 /* General styles */
 .slider {
     position: relative;
+    max-width: 50%;
+}
+
+.review {
+    position: absolute;
+    top: 500px;
+}
+
+.reviews {
+    position: relative;
+}
+
+.review-button {
+    position: absolute;
+    top: 330px;
 }
 
 .slider-list {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    position: relative;
+    z-index: 2
 }
 
 .slider-element {
@@ -153,9 +153,11 @@ img {
 /* Navigation item styles */
 div.slider-arrow-left,
 div.slider-arrow-right {
-    width: 22px;
-    height: 40px;
+    width: 50px;
+    height: 30px;
+    display: block;
     position: absolute;
+    top: 600%;
     cursor: pointer;
     opacity: 0.6;
     z-index: 4;
@@ -163,16 +165,20 @@ div.slider-arrow-right {
 
 div.slider-arrow-left {
     left: 10px;
-    top: 40%;
-    display: block;
-    background: url("../../Static/IMG/arrow-left.png") no-repeat;
+    background-color: white;
 }
 
 div.slider-arrow-right {
     right: 10px;
-    top: 40%;
-    display: block;
-    background: url("../../Static/IMG/arrow-right.png") no-repeat;
+    background: white;
+}
+
+.arrowTxt {
+    z-index: 3;
+    position: absolute;
+    top: -30%;
+    left: 15%;
+    text-align: center;
 }
 
 div.slider-arrow-left:hover {
@@ -186,9 +192,8 @@ div.slider-arrow-right:hover {
 div.slider-dots {
     width: 100%;
     height: auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    position: relative;
+    top: 300px;
     z-index: 3;
     text-align: center;
 }

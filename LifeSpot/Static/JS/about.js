@@ -123,7 +123,7 @@ Slider.defaults = {
     loop: false,     // Бесконечное зацикливание слайдера
     auto: false,     // Автоматическое пролистывание
     interval: 5000, // Интервал между пролистыванием элементов (мс)
-    arrows: false,   // Пролистывание стрелками
+    arrows: true,   // Пролистывание стрелками
     dots: true      // Индикаторные точки
 };
 
@@ -283,4 +283,4 @@ Slider.initialize = function (that) {
     }
 };
 
-new Slider();
+//new Slider();
