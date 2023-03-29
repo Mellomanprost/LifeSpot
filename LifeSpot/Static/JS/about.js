@@ -15,7 +15,6 @@ function Comment() {
     this.date = new Date().toLocaleString();
 }
 
-
 function addComment() {
     // Создадим объект
     let comment = new Comment();
@@ -38,10 +37,7 @@ function addComment() {
     }
 }
 
-/*
-* Запишем отзыв на страницу 
-* 
-* */
+/* Запишем отзыв на страницу */
 const writeReview = review => {
     let likeCounter = '';
 
@@ -76,23 +72,6 @@ function addLike(id) {
     // Обновим текст элемента
     element.innerText = array.join(' ');
 }
-
-//function changeImg() {
-//    //// Найдём нужный элемент по class
-//    //let img = document.getElementsByClassName();
-//    //// Преобразуем текст элемента в массив, разбив его по пробелам (так как счётчик лайков у нас отделен от символа ❤️пробелом)
-//    //let array = element.innerText.split(' ');
-//    //// Вытащим искомое значение счётчика и сразу же преобразуем его в число, так как
-//    //// при сложении любого значения со строкой в JS будет строка, а нам этого не требуется
-//    //let resultNum = parseInt(array[array.length - 1], 10);
-//    //// Увеличим счётчик
-//    //resultNum += 1;
-//    //// Сохраним измененное значение обратно в массив
-//    //array[array.length - 1] = `${resultNum}`;
-//    //// Обновим текст элемента
-//    //element.innerText = array.join(' ');
-
-//}
 
 function Slider(sldrId) {
 
